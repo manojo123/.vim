@@ -23,6 +23,11 @@ Make sure you have the global composer binaries directory in your path. Otherwis
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 ```
 
+After Installation, open vim and type
+```
+:PluginInstall
+```
+
 ### Resources
 
 > Manojai powerful theme with modified php.vim modules
