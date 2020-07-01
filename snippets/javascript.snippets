@@ -1,0 +1,14 @@
+snippet majax
+	var form_data = (new FormData(this));
+	$.ajax({
+	    url: "${1:}",
+	    type: "POST",
+	    data: form_data,
+	    cache: false,
+	    contentType: false,
+	    processData:false,
+	    success: function(data) {
+			${2:var data = JSON.parse(data);}
+	        ${3}
+	    }
+	});
