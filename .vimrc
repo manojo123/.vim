@@ -42,6 +42,19 @@ set complete=.,w,b,u
 " Ignores Case Sensitive in searchs
 set ignorecase
 
+" Enables mouse to copy to clipboard
+set mouse=r
+
+" Go to the next line even if text is to big
+nnoremap j gj
+nnoremap k gk
+
+
+" Unset Line Break for long lines
+set nowrap
+
+
+
 " ----------------------------------- PLUGINS -----------------------------------
 
 "/
@@ -147,6 +160,31 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+"/
+"/ Phpunit
+"/
+
+" the directory that contains your phpunit test cases.
+let g:phpunit_testroot = 'tests'
+
+" the directory that contains source files
+let g:phpunit_srcroot = 'vendor/bin'
+
+" the location of your phpunit file.
+let g:phpunit_bin = 'phpunit'
+
+" php unit command line options
+let g:phpunit_options = ["--stop-on-failure"]
+
+" Run all Test Cases
+nnoremap <F1> :PHPUnitRunAll<CR>
+
+" Switch between source & test file
+nnoremap <Leader>tf :PHPUnitRunCurrentFile<CR>
+
+" Run current test case class
+nnoremap <Leader>ts :PHPUnitSwitchFile<CR>
+
 " --------------------------------- APPEARANCE ---------------------------------
 
 " Enable 256 Terminal colors
@@ -223,6 +261,8 @@ map <F6> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+" Auto change directory to match curent file ,cd
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " ----------------------------------- MACROS ------------------------------------
 

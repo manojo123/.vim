@@ -21,6 +21,7 @@ Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'SirVer/ultisnips'
+Plugin 'c9s/phpunit.vim'
 
 
 call vundle#end()            " required

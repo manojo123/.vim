@@ -8,6 +8,9 @@ snippet _c
 	{
 	}
 
+snippet fn
+	fn(${1}) => ${2}
+
 snippet mcsv
 	${1:$data} = array_map('str_getcsv', preg_replace('/[\x00-\x1F\x80-\xFF]/', '', file(${2:$filepath})));${3}
 
@@ -47,6 +50,11 @@ snippet mexcel
 	
 	for($row = ${2:1}; $row <= $lastRow; $row++){
 	    $worksheet->getCell('A'.$row)->getValue();
+	}
+
+snippet mf
+	function(${1}) {
+		${2}
 	}
 
 snippet mfac

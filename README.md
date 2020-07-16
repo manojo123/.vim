@@ -9,6 +9,7 @@
 
 ```
 cd ~
+sudo apt install composer
 sudo apt install vim
 sudo rm -R ~/.vim && sudo rm ~/.vimrc
 git clone https://github.com/manojo123/.vim
