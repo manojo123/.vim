@@ -306,5 +306,12 @@ snippet mtextarea
 	</div>
 	${7}
 
+snippet mboot
+	public static function boot()
+	{
+		parent::boot();
 
-
+		static::${1:creating}(function ($2) {
+			$3
+		});
+	}

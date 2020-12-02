@@ -6,7 +6,6 @@ set nocompatible
 " Fetch Plugins File
 so ~/.vim/plugins.vim
 
-
 " ------------------------------- CONFIGURATIONS -------------------------------
 
 "Vim command to accept syntax configurations
@@ -48,6 +47,10 @@ set mouse=r
 " Go to the next line even if text is to big
 nnoremap j gj
 nnoremap k gk
+
+" Do not loose selection after indentation
+vnoremap > >gv
+vnoremap < <gv
 
 
 " Unset Line Break for long lines
