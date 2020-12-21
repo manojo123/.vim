@@ -198,7 +198,7 @@ set termguicolors
 colorscheme manojai
 
 " Let's Activate line numbers
-set number
+" set number
 
 " Set spaces between lines. Exclusive resource from mvim
 set linespace=15
