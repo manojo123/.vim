@@ -159,6 +159,7 @@ nnoremap <Leader>c :call pdv#DocumentWithSnip()<CR>
 "/
 
 " Fix the conflict of snippets when pressing tab to next ocurrence
+let g:snipMate = { 'snippet_version' : 1 }
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
